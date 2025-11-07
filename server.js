@@ -4,12 +4,13 @@ const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
   
   if (req.url === '/') {
+    res.statusCode = 200;
     res.end('<h1>Welcome to Simple Node.js Web Server</h1><p>Server is running successfully!</p>');
   } else if (req.url === '/about') {
+    res.statusCode = 200;
     res.end('<h1>About</h1><p>This is a simple Node.js web server created using the built-in http module.</p>');
   } else {
     res.statusCode = 404;
