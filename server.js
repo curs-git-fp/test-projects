@@ -5,6 +5,8 @@ const HOST = '0.0.0.0';
 
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
+
+  console.log(`Restablir contrasenya sol·licitud per a: ${req.url}`);
   
   if (req.url === '/') {
     res.statusCode = 200;
